@@ -1,0 +1,628 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main section {
+  display: none;
+}
+
+main:not(:has(:target)) section#section-pagina-inicial {
+  display: block;
+}
+
+main section:target {
+  display: block;
+}
+
+main section:not(:target) {
+  display: none;
+}
+
+body {
+  background-color: #000000;
+  color: white;
+}
+
+header {
+  background-color: transparent;
+  width: 20vw;
+  height: 100vh;
+  border-right: solid 1px #262626;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+header h1 {
+  margin: 0.5rem 3rem;
+  font-family: "Pacifico", cursive;
+}
+header h1 a {
+  color: white;
+  font-weight: 100;
+  text-decoration: none;
+}
+header nav {
+  padding: 1rem;
+}
+header nav ul li {
+  list-style-type: none;
+  padding: 1.2rem;
+  margin: 0;
+}
+header nav ul li a {
+  text-decoration: none;
+  padding: 0.5rem;
+  color: white;
+  font-weight: 400;
+  font-family: "Noto Sans", sans-serif;
+}
+header nav ul li i {
+  transition: transform 0.8s ease;
+}
+header nav ul li:hover {
+  background-color: #1a1a1a;
+  border-radius: 20px;
+}
+header nav ul li:hover i {
+  transform: scale(1.1);
+}
+header .redes {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+header .redes i {
+  padding: 1rem;
+  color: white;
+}
+header .redes a:hover #ig {
+  color: #ff5b40;
+}
+header .redes a:hover #in {
+  color: #0288d1;
+}
+header .redes a:hover #git {
+  color: #00bcd4;
+}
+header .redes a:hover #wpp {
+  color: #40c351;
+}
+@media (max-width: 884px) {
+  header {
+    width: 10vw;
+  }
+  header h1 {
+    display: none;
+  }
+  header nav {
+    margin: 1rem 0;
+  }
+  header nav ul li a span {
+    display: none;
+  }
+  header nav ul li:hover {
+    color: inherit;
+    background-color: transparent;
+  }
+  header nav ul li:hover i {
+    transform: scale(1);
+  }
+}
+@media (max-width: 500px) {
+  header {
+    position: relative;
+    height: 10vh;
+  }
+  header nav {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #000000;
+    border-bottom: solid 1px;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav ul li {
+    padding: 0;
+  }
+  header nav ul li i {
+    font-size: 1.5rem;
+  }
+  header .redes {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    flex-direction: row;
+    border-top: solid 1px;
+    justify-content: center;
+  }
+  header .redes i {
+    font-size: 2rem;
+  }
+}
+
+main {
+  width: 70%;
+  margin: 1rem 18rem;
+  font-family: "Noto Sans", sans-serif;
+}
+main .section-pagina-inicial {
+  padding: 2rem;
+}
+main .section-pagina-inicial .item-pagina-inicial {
+  padding: 1rem;
+  border-bottom: solid 1px #262626;
+}
+main .section-pagina-inicial .item-pagina-inicial figure {
+  display: flex;
+  color: #000000;
+}
+main .section-pagina-inicial .item-pagina-inicial figure figcaption {
+  color: white;
+  margin: 0 5rem;
+}
+main .section-pagina-inicial .item-pagina-inicial figure figcaption .titulo-pagina-inicial {
+  display: flex;
+}
+main .section-pagina-inicial .item-pagina-inicial figure figcaption .titulo-pagina-inicial button {
+  margin: 0 1rem;
+}
+main .section-pagina-inicial .item-pagina-inicial figure figcaption .legenda-pagina-inicial {
+  display: flex;
+}
+main .section-pagina-inicial .item-pagina-inicial figure figcaption .legenda-pagina-inicial p {
+  padding: 1rem;
+}
+main .section-pagina-inicial .item-pagina-inicial figure figcaption p {
+  padding: 1.5rem;
+}
+main .section-pagina-inicial .item-pagina-inicial .destaque-pagina-inicial {
+  margin: 5rem 0 0;
+}
+main .section-pagina-inicial .item-pagina-inicial .destaque-pagina-inicial img {
+  margin: 0 0.5rem;
+  width: 6vw;
+  cursor: pointer;
+}
+main .section-pagina-inicial img {
+  width: 15vw;
+  border-radius: 100%;
+}
+main button {
+  background-color: #262626;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+}
+main button a {
+  text-decoration: none;
+  color: white;
+}
+main .item-pagina {
+  display: none;
+}
+main #sobre-mim {
+  display: block;
+}
+main .pagina-inicial-sobre .nav-sobre {
+  text-align: center;
+}
+main .pagina-inicial-sobre .nav-sobre button {
+  border: 0;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.447);
+  cursor: pointer;
+  font-size: 1rem;
+}
+main .pagina-inicial-sobre .nav-sobre button:active {
+  color: rgb(255, 255, 255);
+}
+main .pagina-inicial-sobre #sobre-mim {
+  padding: 1rem;
+}
+main .pagina-inicial-sobre #sobre-mim h3 {
+  padding: 1rem;
+  text-align: center;
+}
+main .pagina-inicial-sobre #sobre-mim p {
+  margin: 0 0 1rem;
+}
+main .pagina-inicial-sobre #hard-kills {
+  padding: 2rem;
+  text-align: center;
+}
+main .pagina-inicial-sobre #hard-kills img {
+  border-radius: 0;
+  width: 10vw;
+  height: 5vh;
+}
+main .pagina-inicial-sobre #soft-kills {
+  padding: 2rem;
+}
+main .section-projetos {
+  font-family: "Noto Sans", sans-serif;
+}
+main .section-projetos .item-botao {
+  margin: 0 0 1rem;
+}
+main .section-projetos .item-botao button {
+  color: white;
+  font-style: italic;
+}
+main .section-projetos .item-botao button:hover {
+  background-color: rgba(255, 255, 255, 0.526);
+}
+main .section-projetos .section-projetos-image {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .section-projetos .section-projetos-image .foto-item {
+  cursor: pointer;
+  padding: 1rem;
+}
+main .section-projetos .section-projetos-image .foto-item img {
+  width: 20vw;
+  border: solid 1px rgba(255, 255, 255, 0.381);
+}
+main .section-projetos .subpage {
+  display: none;
+  position: fixed;
+  background-color: rgba(242, 242, 242, 0.9098039216);
+  top: 20%;
+  left: 30%;
+  width: 50vw;
+  height: auto;
+  z-index: 999;
+  color: #000000;
+  border-radius: 10px;
+}
+main .section-projetos .subpage h3 {
+  padding: 1rem 3rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+main .section-projetos .subpage p {
+  text-align: center;
+  padding: 2rem;
+  font-weight: 300;
+}
+main .section-projetos .subpage button {
+  margin: 0 0.5rem 0.5rem;
+  float: inline-end;
+  background-color: white;
+  box-shadow: 0 6px 12px rgba(149, 148, 148, 0.2);
+}
+main .section-projetos .subpage button a {
+  color: #000000;
+}
+main .section-projetos .subpage .info-projeto {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+main .section-projetos .subpage .info-projeto img {
+  width: 3vw;
+}
+main .overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+}
+main .section-experiencia {
+  margin: 2rem;
+  padding: 2rem;
+  font-family: "Noto Sans", sans-serif;
+}
+main .section-experiencia .item-botao {
+  margin: 0 0 1rem;
+}
+main .section-experiencia .item-botao button {
+  color: white;
+  font-style: italic;
+}
+main .section-experiencia .item-botao button:hover {
+  background-color: rgba(255, 255, 255, 0.526);
+}
+main .section-experiencia p {
+  font-weight: 100;
+}
+main .section-experiencia img {
+  width: 3vw;
+  border-radius: 100%;
+}
+main .section-experiencia .item-exp {
+  font-weight: 400;
+  padding: 2rem;
+  border-bottom: solid 1px #262626;
+}
+main .section-cursos {
+  font-family: "Noto Sans", sans-serif;
+}
+main .section-cursos .item-formacao {
+  display: flex;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #353535;
+  margin: 2rem 0 3rem;
+}
+main .section-cursos .item-formacao .item-formacao-p {
+  padding: 1rem;
+}
+main .section-cursos .item-formacao img {
+  width: 4vw;
+}
+main .section-cursos .item-formacao p:nth-child(3) {
+  font-weight: 100;
+}
+main .section-cursos .item-curso {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #353535;
+  margin: 2rem 0 3rem;
+}
+main .section-cursos .item-curso .cursos {
+  padding: 1rem;
+}
+main .section-galeria {
+  padding: 5rem 1rem 0;
+  flex-wrap: wrap;
+}
+main .section-galeria .item-galeria img {
+  width: 20vw;
+}
+main .section-galeria .galeria-open {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+main .section-galeria figure {
+  text-align: center;
+  color: #fff;
+  margin-top: 15px;
+}
+main .section-galeria figcaption {
+  font-family: "Noto Sans", sans-serif;
+}
+main .section-galeria .close {
+  position: absolute;
+  right: 20rem;
+  top: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 884px) {
+  main .section-galeria {
+    padding: 1rem;
+  }
+  main .section-galeria .close {
+    right: 5rem;
+    top: 10rem;
+  }
+}
+@media (max-width: 500px) {
+  main .section-galeria {
+    padding: 1rem;
+  }
+  main .section-galeria .item-galeria {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .section-galeria .item-galeria img {
+    padding: 0.2rem;
+    width: 30vw;
+  }
+  main .section-galeria .close {
+    right: 0;
+    top: 4rem;
+    background-color: rgba(0, 0, 0, 0.2235294118);
+  }
+}
+@media (max-width: 884px) {
+  main {
+    width: 80%;
+    margin: 1rem 8rem;
+    font-family: "Noto Sans", sans-serif;
+  }
+  main .section-pagina-inicial {
+    padding: 0;
+  }
+  main .section-pagina-inicial figure img {
+    width: 20vw;
+    height: auto;
+  }
+  main .section-pagina-inicial figure figcaption {
+    margin: 0 1rem;
+  }
+  main .section-experiencia {
+    margin: 0;
+    padding: 0;
+  }
+  main .section-cursos .item-formacao img {
+    width: 10vw;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  main .section-pagina-inicial .item-pagina-inicial {
+    border-bottom: solid 1px #262626;
+  }
+  main .section-pagina-inicial .item-pagina-inicial figure {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    align-items: center;
+  }
+  main .section-pagina-inicial .item-pagina-inicial figure img {
+    width: 25vw;
+    height: 15vh;
+    border-radius: 100%;
+  }
+  main .section-pagina-inicial .item-pagina-inicial figure figcaption {
+    color: white;
+    margin: 0;
+  }
+  main .section-pagina-inicial .item-pagina-inicial figure figcaption h2 {
+    margin: auto;
+    padding: 0.5rem;
+  }
+  main .section-pagina-inicial .item-pagina-inicial figure figcaption .titulo-pagina-inicial {
+    display: flex;
+    flex-direction: column;
+  }
+  main .section-pagina-inicial .item-pagina-inicial figure figcaption .titulo-pagina-inicial button {
+    margin: auto;
+    padding: 0.6rem;
+    width: 40vw;
+  }
+  main .section-pagina-inicial .item-pagina-inicial figure figcaption .legenda-pagina-inicial p {
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  main .section-pagina-inicial .item-pagina-inicial .destaque-pagina-inicial {
+    margin: 0;
+  }
+  main .section-pagina-inicial .item-pagina-inicial .destaque-pagina-inicial img {
+    margin: 0 0.5rem;
+    width: 10vw;
+    cursor: pointer;
+  }
+  main button {
+    background-color: #262626;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+  }
+  main button a {
+    text-decoration: none;
+    color: white;
+  }
+  main .item-pagina {
+    display: none;
+  }
+  main .info-pagina-sobre p {
+    margin: 0;
+    padding: 0 0 2rem;
+  }
+  main .info-pagina-sobre .item-pagina #icones-hard-kills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 2rem;
+  }
+  main .info-pagina-sobre .item-pagina #icones-hard-kills img {
+    width: 20vw;
+  }
+  main .section-projetos {
+    font-family: "Noto Sans", sans-serif;
+  }
+  main .section-projetos .section-projetos-image {
+    margin: 1rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .section-projetos .section-projetos-image .foto-item {
+    cursor: pointer;
+    padding: 0.2rem;
+  }
+  main .section-projetos .section-projetos-image .foto-item img {
+    width: 40vw;
+  }
+  main .section-projetos .subpage {
+    display: none;
+    position: fixed;
+    background-color: rgba(242, 242, 242, 0.9098039216);
+    top: 20%;
+    left: auto;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    color: #000000;
+    border-radius: 10px;
+  }
+  main .section-projetos .subpage h3 {
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  main .section-projetos .subpage p {
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: 300;
+  }
+  main .section-projetos .subpage .info-projeto {
+    padding: 0 1rem;
+  }
+  main .section-projetos .subpage .info-projeto img {
+    margin: 0.5rem 0;
+    width: 10vw;
+  }
+  main .section-experiencia {
+    margin: 0;
+    padding: 0.5rem;
+    font-family: "Noto Sans", sans-serif;
+  }
+  main .section-experiencia p {
+    font-weight: 100;
+  }
+  main .section-experiencia img {
+    width: 15vw;
+    border-radius: 100%;
+  }
+  main .section-experiencia .item-exp {
+    font-weight: 400;
+    padding: 2rem;
+    border-bottom: solid 1px #262626;
+    margin: 0 0 2rem;
+  }
+  main .section-cursos h3 {
+    margin: 1rem;
+  }
+  main .section-cursos .item-formacao {
+    margin: 1rem 0.5rem 3rem;
+  }
+  main .section-cursos .item-formacao .item-formacao-p {
+    padding: 1rem;
+  }
+  main .section-cursos .item-formacao img {
+    width: 20vw;
+  }
+  main .section-cursos .item-curso {
+    border-radius: 10px;
+    background-color: #353535;
+    margin: 1rem 0.5rem 3rem;
+  }
+  main .section-cursos .item-curso .cursos {
+    padding: 1rem;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.063);
+  }
+}/*# sourceMappingURL=style.css.map */
