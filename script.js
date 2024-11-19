@@ -55,3 +55,4 @@ document.querySelectorAll('.photo').forEach(function(photo) {
   function closeModal() {
       modal.style.display = "none";
   }
+  
